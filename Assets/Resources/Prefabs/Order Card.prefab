@@ -1272,3 +1272,18 @@ MonoBehaviour:
   cookButton: {fileID: 2572335221206139162}
   serveButton: {fileID: 5425088991394208853}
   receiptButton: {fileID: 1377015229435670040}
+--- !u!114 &3924034552955434456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 508382176090552872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 605fef0fd0dccb8418214d084154c93e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  runtimeSet: {fileID: 11400000, guid: 5b1b481d967dc7542b1716b2aaab82d7, type: 2}
+  addOnAwake: 1
+  removeOnOnDestroy: 1
