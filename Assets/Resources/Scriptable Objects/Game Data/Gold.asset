@@ -9,8 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb4fcbe4f02bd5b4dba3f0fa18b9b24d, type: 3}
-  m_Name: Game Data
+  m_Script: {fileID: 11500000, guid: af1769adff1de7547abf1d8edd2fd904, type: 3}
+  m_Name: Gold
   m_EditorClassIdentifier: 
-  gold: {fileID: 11400000, guid: 24a2b8a667dec664090a042f8e6da6e8, type: 2}
-  diamond: {fileID: 11400000, guid: 96e46cb7781bb384a9d5d24ae58b2ffc, type: 2}
+  Value: 0
