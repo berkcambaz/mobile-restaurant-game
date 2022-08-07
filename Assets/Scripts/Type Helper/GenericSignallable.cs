@@ -3,16 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-[CreateAssetMenu(menuName = "Signallable/Int", fileName = "New Int")]
-public class IntSignallable : ScriptableObject
+public class GenericSignallable<T> : ScriptableObject
 {
     private List<Callback> listeners = new List<Callback>();
-    public delegate void Callback(int _value);
+    public delegate void Callback(T _value);
 
-    [SerializeField] private int Value;
+    [SerializeField] private T Value;
 
-    private int _value;
-    public int value
+    private T _value;
+    public T value
     {
         get { return _value; }
         set

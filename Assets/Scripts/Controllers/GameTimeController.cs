@@ -11,6 +11,6 @@ public class GameTimeController : MonoBehaviour
 
     void Update()
     {
-        gameTime.UpdateTime(Time.deltaTime);
+        gameTime.UpdateTime(this);
     }
 }
