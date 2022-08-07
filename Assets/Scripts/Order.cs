@@ -8,8 +8,12 @@ public class Order : ScriptableObject
 {
     private SeedRandom srandom = new SeedRandom();
 
-    public FoodSet foodSet;
-    public GuestSet guestSet;
+    [SerializeField] private FoodSet foodSet;
+    [SerializeField] private GuestSet guestSet;
+
+    [SerializeField] private GameEvent cookGameEvent;
+    [SerializeField] private GameEvent serveGameEvent;
+    [SerializeField] private GameEvent receiptGameEvent;
 
     public void Generate(OrderController _controller)
     {
@@ -25,6 +29,26 @@ public class Order : ScriptableObject
             _controller.foodImages[i].gameObject.SetActive(foods[i] != null);
             if (foods[i] != null) _controller.foodImages[i].sprite = foods[i].sprite;
         }
+    }
+
+    public void Cook(OrderController _controller)
+    {
+        _controller.cookButton.gameObject.SetActive(false);
+        _controller.serveButton.gameObject.SetActive(true);
+        cookGameEvent.Dispatch();
+    }
+
+    public void Serve(OrderController _controller)
+    {
+        _controller.serveButton.gameObject.SetActive(false);
+        _controller.receiptButton.gameObject.SetActive(true);
+        serveGameEvent.Dispatch();
+    }
+
+    public void Receipt(OrderController _controller)
+    {
+        _controller.receiptButton.enabled = false;
+        receiptGameEvent.Dispatch();
     }
 
     private Guest GetRandomGuest()

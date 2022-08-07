@@ -13,9 +13,27 @@ public class OrderController : MonoBehaviour
 
     public Image guestImage;
     public Image[] foodImages;
+    public Button cookButton;
+    public Button serveButton;
+    public Button receiptButton;
 
     void OnEnable()
     {
         order.Generate(this);
+    }
+
+    public void ButtonCook()
+    {
+        order.Cook(this);
+    }
+
+    public void ButtonServe()
+    {
+        order.Serve(this);
+    }
+
+    public void ButtonReceipt()
+    {
+        order.Receipt(this);
     }
 }
