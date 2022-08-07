@@ -4254,6 +4254,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8adfe5b1548ef04496ba319bd759eb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameTime: {fileID: 11400000, guid: 3a9b4109c30285249b8af07fe685a514, type: 2}
+  gameTimeImage: {fileID: 1737388732}
 --- !u!1 &2085018064
 GameObject:
   m_ObjectHideFlags: 0

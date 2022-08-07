@@ -7,5 +7,5 @@ public class GameData : ScriptableObject
 {
     public IntSignallable gold;
     public IntSignallable diamond;
-    public Time time;
+    public GameTime gameTime;
 }

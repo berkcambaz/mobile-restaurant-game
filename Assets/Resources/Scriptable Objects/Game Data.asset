@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gold: {fileID: 11400000, guid: 24a2b8a667dec664090a042f8e6da6e8, type: 2}
   diamond: {fileID: 11400000, guid: 96e46cb7781bb384a9d5d24ae58b2ffc, type: 2}
+  gameTime: {fileID: 11400000, guid: 3a9b4109c30285249b8af07fe685a514, type: 2}
