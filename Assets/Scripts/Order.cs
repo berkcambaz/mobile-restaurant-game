@@ -8,6 +8,7 @@ public class Order : ScriptableObject
 {
     private SeedRandom srandom = new SeedRandom();
 
+    [SerializeField] private GameData gameData;
     [SerializeField] private FoodSet foodSet;
     [SerializeField] private GuestSet guestSet;
 
@@ -47,6 +48,8 @@ public class Order : ScriptableObject
 
     public void Receipt(OrderController _controller)
     {
+        gameData.gold.value += 1;
+
         _controller.receiptButton.enabled = false;
         Destroy(_controller.gameObject);
         receiptGameEvent.Dispatch();
