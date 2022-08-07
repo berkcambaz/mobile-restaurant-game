@@ -911,7 +911,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6817028299340522030, guid: ae469f663a8bb884a9710de08b610032, type: 3}
       propertyPath: m_Name
-      value: Guest Card
+      value: Order Card
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ae469f663a8bb884a9710de08b610032, type: 3}
@@ -920,3 +920,24 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4707431296509544967, guid: ae469f663a8bb884a9710de08b610032, type: 3}
   m_PrefabInstance: {fileID: 6455015046022846470}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &508382176090552872 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6817028299340522030, guid: ae469f663a8bb884a9710de08b610032, type: 3}
+  m_PrefabInstance: {fileID: 6455015046022846470}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &-67231743657120157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 508382176090552872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab93159146f8d9244ad664884555dba3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  order: {fileID: 0}
+  guest: {fileID: 0}
+  foods: []
+  state: {fileID: 0}

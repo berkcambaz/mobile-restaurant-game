@@ -9,6 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c02fe5a18b514a947bc9e8bca2d833bc, type: 3}
-  m_Name: Serve
+  m_Script: {fileID: 11500000, guid: 6a24bff6ebf3dce43ab98daeef6130f4, type: 3}
+  m_Name: OnGameClose
   m_EditorClassIdentifier: 

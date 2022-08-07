@@ -7,5 +7,4 @@ public class OrderController : MonoBehaviour
     public Order order;
     public Guest guest;
     public Food[] foods;
-    public OrderState state;
 }
