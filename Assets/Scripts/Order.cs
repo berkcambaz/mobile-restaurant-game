@@ -48,6 +48,7 @@ public class Order : ScriptableObject
     public void Receipt(OrderController _controller)
     {
         _controller.receiptButton.enabled = false;
+        Destroy(_controller.gameObject);
         receiptGameEvent.Dispatch();
     }
 
