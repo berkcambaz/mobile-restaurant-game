@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5828393}
   - component: {fileID: 5828392}
   m_Layer: 5
-  m_Name: Image (9)
+  m_Name: Image Food 8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -87,7 +87,7 @@ GameObject:
   - component: {fileID: 246052291}
   - component: {fileID: 246052290}
   m_Layer: 5
-  m_Name: Image (4)
+  m_Name: Image Food 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -162,7 +162,7 @@ GameObject:
   - component: {fileID: 510268693}
   - component: {fileID: 510268692}
   m_Layer: 5
-  m_Name: Image (7)
+  m_Name: Image Food 6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -237,7 +237,7 @@ GameObject:
   - component: {fileID: 574020407}
   - component: {fileID: 574020406}
   m_Layer: 5
-  m_Name: Image (3)
+  m_Name: Image Food 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -312,7 +312,7 @@ GameObject:
   - component: {fileID: 770666432}
   - component: {fileID: 770666431}
   m_Layer: 5
-  m_Name: Image (2)
+  m_Name: Image Food 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -387,7 +387,7 @@ GameObject:
   - component: {fileID: 1044758737}
   - component: {fileID: 1044758736}
   m_Layer: 5
-  m_Name: Image (6)
+  m_Name: Image Food 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -530,7 +530,7 @@ GameObject:
   - component: {fileID: 1316862712}
   - component: {fileID: 1316862711}
   m_Layer: 5
-  m_Name: Image (5)
+  m_Name: Image Food 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -605,7 +605,7 @@ GameObject:
   - component: {fileID: 1439845032}
   - component: {fileID: 1439845031}
   m_Layer: 5
-  m_Name: Image (8)
+  m_Name: Image Food 7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -680,7 +680,7 @@ GameObject:
   - component: {fileID: 1442634951}
   - component: {fileID: 1442634950}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Image Guest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -755,7 +755,7 @@ GameObject:
   - component: {fileID: 1757510468}
   - component: {fileID: 1757510467}
   m_Layer: 5
-  m_Name: Image (1)
+  m_Name: Image Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -937,7 +937,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab93159146f8d9244ad664884555dba3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  order: {fileID: 0}
+  order: {fileID: 11400000, guid: 7c6604f4ab454f5419244ac18e0ebca5, type: 2}
   guest: {fileID: 0}
   foods: []
-  state: {fileID: 0}
+  guestImage: {fileID: 1442634950}
+  foodImages:
+  - {fileID: 770666431}
+  - {fileID: 574020406}
+  - {fileID: 246052290}
+  - {fileID: 1316862711}
+  - {fileID: 1044758736}
+  - {fileID: 510268692}
+  - {fileID: 1439845031}
+  - {fileID: 5828392}
+  buttonImage: {fileID: 1757510467}

@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e987bd49fc1bacd4a96c703e8466649f, type: 3}
+  m_Name: Order
+  m_EditorClassIdentifier: 
+  foodSet: {fileID: 11400000, guid: 507ec549a7459b8438cabedcb707b8e1, type: 2}
+  guestSet: {fileID: 11400000, guid: bd778b93b8c8e5b48b4a03d276777596, type: 2}
