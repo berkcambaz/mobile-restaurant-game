@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bf110908c94d094ab663973792b5399, type: 3}
   m_Name: Game Time
   m_EditorClassIdentifier: 
-  timeTreshold: 10
+  timeTreshold: 5
   passedTime: 0
+  gameTimeChangeEvent: {fileID: 11400000, guid: 0bee17a7f0e1ea245b96839275d3b489, type: 2}
   gameTimeSprites:
   - {fileID: 21300000, guid: a2b4ecaa3b49ab141b2dc91d4e2de4cf, type: 3}
   - {fileID: 21300000, guid: 4eb4dd07293ac7447b3333d888011ed0, type: 3}

@@ -8,6 +8,8 @@ public class GameTime : ScriptableObject
     public float timeTreshold;
     [SerializeField] private float passedTime;
 
+    public GameEvent gameTimeChangeEvent;
+
     [SerializeField] private Sprite[] gameTimeSprites;
 
     public void UpdateTime(GameTimeController _controller)
@@ -15,6 +17,8 @@ public class GameTime : ScriptableObject
         passedTime += Time.deltaTime;
         if (passedTime >= timeTreshold)
         {
+            gameTimeChangeEvent.Dispatch();
+
             passedTime -= timeTreshold;
 
             Sprite nextSprite = GetNextGameTimeSprite(_controller.gameTimeImage.sprite);
