@@ -21,6 +21,8 @@ public class GenericSignallable<T> : ScriptableObject
         }
     }
 
+    void OnValidate() { value = Value; }
+
     void OnEnable()
     {
         _value = Value;
