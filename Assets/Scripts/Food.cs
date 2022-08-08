@@ -10,5 +10,6 @@ public class Food : ScriptableObject
     public Rarity rarity;
     [Range(0, 10)] public float cookTime;
     [Range(0, 10)] public float eatTime;
+    public int price;
     public int stars;
 }

@@ -77,7 +77,14 @@ public class Order : ScriptableObject
     {
         _controller.receiptButton.enabled = false;
 
-        gameData.gold.value += 1;
+        int totalPrice = 0;
+        for (int i = 0; i < _controller.foods.Length; ++i)
+        {
+            if (_controller.foods[i] == null) break;
+
+            totalPrice += _controller.foods[i].price;
+        }
+        gameData.gold.value += totalPrice;
 
         receiptGameEvent.Dispatch();
         Destroy(_controller.gameObject);

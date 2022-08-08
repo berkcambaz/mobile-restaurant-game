@@ -17,4 +17,5 @@ MonoBehaviour:
   rarity: {fileID: 11400000, guid: 3dcd4ef4fcc7df2438649eb0363d0b81, type: 2}
   cookTime: 1
   eatTime: 1
+  price: 1
   stars: 0
