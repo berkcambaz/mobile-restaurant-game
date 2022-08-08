@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "Food Set")]
-public class FoodSet : StaticSet<Food>
+public class FoodCollection : ScriptableObject
 {
-
+    public Food[] foods;
 }

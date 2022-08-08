@@ -9,8 +9,8 @@ public class Order : ScriptableObject
     private SeedRandom srandom = new SeedRandom();
 
     [SerializeField] private GameData gameData;
-    [SerializeField] private FoodSet foodSet;
-    [SerializeField] private GuestSet guestSet;
+    [SerializeField] private FoodCollection foodCollection;
+    [SerializeField] private GuestCollection guestCollection;
     [SerializeField] private GameObjectRuntimeSet orderGameObjects;
 
     [SerializeField] private GameEvent cookGameEvent;
@@ -104,7 +104,7 @@ public class Order : ScriptableObject
 
     private Guest GetRandomGuest()
     {
-        return guestSet.elements[srandom.Number(0, guestSet.elements.Length)];
+        return guestCollection.guests[srandom.Number(0, guestCollection.guests.Length)];
     }
 
     private Food[] GetRandomFoods()
@@ -123,6 +123,6 @@ public class Order : ScriptableObject
 
     private Food GetRandomFood()
     {
-        return foodSet.elements[srandom.Number(0, foodSet.elements.Length)];
+        return foodCollection.foods[srandom.Number(0, foodCollection.foods.Length)];
     }
 }
