@@ -11,5 +11,6 @@ public class Food : ScriptableObject
     [Range(0, 10)] public float cookTime;
     [Range(0, 10)] public float eatTime;
     public int price;
+    public int upgradeCost;
     public int stars;
 }

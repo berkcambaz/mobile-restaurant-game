@@ -18,4 +18,5 @@ MonoBehaviour:
   cookTime: 1
   eatTime: 1
   price: 1
+  upgradeCost: 10
   stars: 0
