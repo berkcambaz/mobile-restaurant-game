@@ -11,10 +11,20 @@ public class Order : ScriptableObject
     [SerializeField] private GameData gameData;
     [SerializeField] private FoodSet foodSet;
     [SerializeField] private GuestSet guestSet;
+    [SerializeField] private GameObjectRuntimeSet orderGameObjects;
 
     [SerializeField] private GameEvent cookGameEvent;
     [SerializeField] private GameEvent serveGameEvent;
     [SerializeField] private GameEvent receiptGameEvent;
+
+    public void Create(OrderCreatorController _controller)
+    {
+        if (orderGameObjects.items.Count >= gameData.maxOrderCount.value) return;
+
+        GameObject prefab = _controller.orderPrefab;
+        Transform parent = _controller.orderContainer.transform;
+        Instantiate(prefab, Vector3.zero, Quaternion.identity, parent);
+    }
 
     public void Generate(OrderController _controller)
     {
@@ -99,10 +109,16 @@ public class Order : ScriptableObject
 
     private Food[] GetRandomFoods()
     {
+        Food[] output = new Food[8];
+
         int count = srandom.Number(1, 8 + 1);
-        Food[] foods = new Food[8];
+        Food[] foods = new Food[count];
         for (int i = 0; i < count; ++i) foods[i] = GetRandomFood();
-        return foods;
+
+        Array.Sort(foods, (x, y) => x.GetHashCode().CompareTo(y.GetHashCode()));
+        Array.Copy(foods, output, count);
+
+        return output;
     }
 
     private Food GetRandomFood()

@@ -6638,7 +6638,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1939433218}
         m_TargetAssemblyTypeName: OrderCreatorController, Assembly-CSharp
-        m_MethodName: CreateRandomOrder
+        m_MethodName: CreateOrder
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6660,7 +6660,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 328afac7f869bda4ea2b718be3bb1200, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameData: {fileID: 11400000, guid: 32c2255c19114fc4b88cb84f521d1d1e, type: 2}
+  order: {fileID: 11400000, guid: 7c6604f4ab454f5419244ac18e0ebca5, type: 2}
   orderPrefab: {fileID: 508382176090552872, guid: 49c818e3e7ed61148b7be40b9e22f3d4, type: 3}
   orderContainer: {fileID: 390526413}
 --- !u!1 &2085018064

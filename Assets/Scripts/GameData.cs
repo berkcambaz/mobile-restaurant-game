@@ -8,6 +8,7 @@ public class GameData : ScriptableObject
     public IntSignallable gold;
     public IntSignallable diamond;
     public GameTime gameTime;
+    public IntValue maxOrderCount;
 
     public void SaveGameData()
     {

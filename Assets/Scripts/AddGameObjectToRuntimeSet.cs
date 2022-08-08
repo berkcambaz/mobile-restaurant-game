@@ -15,7 +15,7 @@ public class AddGameObjectToRuntimeSet : MonoBehaviour
 
     void OnDisable()
     {
-        if (!removeOnOnDestroy) runtimeSet.Add(gameObject);
+        if (!removeOnOnDestroy) runtimeSet.Remove(gameObject);
     }
 
     void Awake()
@@ -25,6 +25,6 @@ public class AddGameObjectToRuntimeSet : MonoBehaviour
 
     void OnDestroy()
     {
-        if (removeOnOnDestroy) runtimeSet.Add(gameObject);
+        if (removeOnOnDestroy) runtimeSet.Remove(gameObject);
     }
 }

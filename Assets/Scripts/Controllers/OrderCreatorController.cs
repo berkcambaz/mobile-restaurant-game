@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class OrderCreatorController : MonoBehaviour
 {
-    public GameData gameData;
+    public Order order;
 
     public GameObject orderPrefab;
     public GameObject orderContainer;
 
-    public void CreateRandomOrder()
+    public void CreateOrder()
     {
-        Instantiate(orderPrefab, Vector3.zero, Quaternion.identity, orderContainer.transform);
+        order.Create(this);
     }
 }
