@@ -33,27 +33,56 @@ public class Order : ScriptableObject
         }
     }
 
-    public void Cook(OrderController _controller)
+    public IEnumerator Cook(OrderController _controller)
     {
+        _controller.cookButton.enabled = false;
+
+        for (int i = 0; i < _controller.foods.Length; ++i)
+        {
+            if (_controller.foods[i] == null) break;
+
+            float cookTime = _controller.foods[i].cookTime;
+            OrderFoodController foodController = _controller.orderFoodControllers[i];
+
+            yield return _controller.StartCoroutine(foodController.Progress(cookTime));
+        }
+
+        cookGameEvent.Dispatch();
         _controller.cookButton.gameObject.SetActive(false);
         _controller.serveButton.gameObject.SetActive(true);
-        cookGameEvent.Dispatch();
     }
 
-    public void Serve(OrderController _controller)
+    public IEnumerator Serve(OrderController _controller)
     {
+        _controller.serveButton.enabled = false;
+
+        for (int i = 0; i < _controller.foods.Length; ++i)
+        {
+            if (_controller.foods[i] == null) break;
+
+            float eatTime = _controller.foods[i].eatTime;
+            OrderFoodController foodController = _controller.orderFoodControllers[i];
+
+            yield return _controller.StartCoroutine(foodController.Progress(eatTime));
+        }
+
+        serveGameEvent.Dispatch();
         _controller.serveButton.gameObject.SetActive(false);
         _controller.receiptButton.gameObject.SetActive(true);
-        serveGameEvent.Dispatch();
+
+        yield return null;
     }
 
-    public void Receipt(OrderController _controller)
+    public IEnumerator Receipt(OrderController _controller)
     {
         _controller.receiptButton.enabled = false;
-        Destroy(_controller.gameObject);
 
         gameData.gold.value += 1;
+
         receiptGameEvent.Dispatch();
+        Destroy(_controller.gameObject);
+
+        yield return null;
     }
 
     private Guest GetRandomGuest()

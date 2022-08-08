@@ -24,16 +24,16 @@ public class OrderController : MonoBehaviour
 
     public void ButtonCook()
     {
-        order.Cook(this);
+        StartCoroutine(order.Cook(this));
     }
 
     public void ButtonServe()
     {
-        order.Serve(this);
+        StartCoroutine(order.Serve(this));
     }
 
     public void ButtonReceipt()
     {
-        order.Receipt(this);
+        StartCoroutine(order.Receipt(this));
     }
 }
