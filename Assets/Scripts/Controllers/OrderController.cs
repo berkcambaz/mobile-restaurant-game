@@ -17,7 +17,7 @@ public class OrderController : MonoBehaviour
     public Button serveButton;
     public Button receiptButton;
 
-    void OnEnable()
+    void Start()
     {
         order.Generate(this);
     }
