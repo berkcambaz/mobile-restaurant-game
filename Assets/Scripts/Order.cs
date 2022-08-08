@@ -35,7 +35,7 @@ public class Order : ScriptableObject
 
     public IEnumerator Cook(OrderController _controller)
     {
-        _controller.cookButton.enabled = false;
+        _controller.cookButton.interactable = false;
 
         for (int i = 0; i < _controller.foods.Length; ++i)
         {
@@ -54,7 +54,7 @@ public class Order : ScriptableObject
 
     public IEnumerator Serve(OrderController _controller)
     {
-        _controller.serveButton.enabled = false;
+        _controller.serveButton.interactable = false;
 
         for (int i = 0; i < _controller.foods.Length; ++i)
         {
@@ -75,7 +75,7 @@ public class Order : ScriptableObject
 
     public IEnumerator Receipt(OrderController _controller)
     {
-        _controller.receiptButton.enabled = false;
+        _controller.receiptButton.interactable = false;
 
         int totalPrice = 0;
         for (int i = 0; i < _controller.foods.Length; ++i)
