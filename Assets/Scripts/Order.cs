@@ -27,8 +27,9 @@ public class Order : ScriptableObject
         _controller.guestImage.sprite = guest.sprite;
         for (int i = 0; i < 8; ++i)
         {
-            _controller.foodImages[i].gameObject.SetActive(foods[i] != null);
-            if (foods[i] != null) _controller.foodImages[i].sprite = foods[i].sprite;
+            _controller.orderFoodControllers[i].gameObject.SetActive(foods[i] != null);
+            if (foods[i] != null)
+                _controller.orderFoodControllers[i].foodImage.sprite = foods[i].sprite;
         }
     }
 
@@ -48,10 +49,10 @@ public class Order : ScriptableObject
 
     public void Receipt(OrderController _controller)
     {
-        gameData.gold.value += 1;
-
         _controller.receiptButton.enabled = false;
         Destroy(_controller.gameObject);
+
+        gameData.gold.value += 1;
         receiptGameEvent.Dispatch();
     }
 

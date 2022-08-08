@@ -12,7 +12,7 @@ public class OrderController : MonoBehaviour
     [Space(10f)]
 
     public Image guestImage;
-    public Image[] foodImages;
+    public OrderFoodController[] orderFoodControllers;
     public Button cookButton;
     public Button serveButton;
     public Button receiptButton;
