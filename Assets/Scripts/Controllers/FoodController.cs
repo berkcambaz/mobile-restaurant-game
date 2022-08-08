@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class FoodController : MonoBehaviour
 {
+    public Food food;
+
     public Image foodImage;
     public Text foodText;
     public RectTransform starMaskRectTransform;
@@ -12,8 +14,13 @@ public class FoodController : MonoBehaviour
     public Image diamondImage;
     public Text costText;
 
+    void Start()
+    {
+        food.Initialize(this);
+    }
+
     public void ButtonUpgrade()
     {
-
+        food.Upgrade();
     }
 }

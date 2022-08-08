@@ -1303,7 +1303,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5176323399154157888}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2067505772968019258}
+        m_TargetAssemblyTypeName: FoodController, Assembly-CSharp
+        m_MethodName: ButtonUpgrade
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &3529301981016366083
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1423,6 +1435,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e07ecb9943cf6742968c224323d6fb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  food: {fileID: 0}
   foodImage: {fileID: 345820352}
   foodText: {fileID: 989592523}
   starMaskRectTransform: {fileID: 6708211686008639585}
